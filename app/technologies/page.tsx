@@ -2,7 +2,7 @@ import { ITechType } from "../components/AllTypes";
 import { Tech } from "../components/Tech";
 
 const Technologies =async()=>{
-  const res = await fetch('http://localhost:3001/technologies');
+  const res = await fetch('https://tech-api-ruddy.vercel.app/data.json');
   const techList:ITechType[]= await res.json();
 
   return (

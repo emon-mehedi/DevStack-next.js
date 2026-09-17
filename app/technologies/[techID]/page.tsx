@@ -9,7 +9,7 @@ const techDetails = async ({
   params: Promise<{ techID: string }>;
 }) => {
   const { techID } = await params;
-  const res = await fetch(`http://localhost:3001/technologies/${techID}`);
+  const res = await fetch(`https://tech-api-ruddy.vercel.app/api/${techID}`);
   const tech: ITechType = await res.json();
 
   return (
